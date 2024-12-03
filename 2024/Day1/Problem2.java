@@ -10,7 +10,7 @@ public class Problem2 {
         // Historian Hysteria Part 2
 
         // PARSE DATA
-        Scanner scan = new Scanner(new File("./2024/Day1/input.txt"));
+        Scanner scan = new Scanner(new File("/Day1/input.in"));
 
         ArrayList<Integer> list1 = new ArrayList<Integer>();
         ArrayList<Integer> list2 = new ArrayList<Integer>();
@@ -22,10 +22,11 @@ public class Problem2 {
 
         scan.close();
 
-        new Problem2(list1, list2);
+        Solution(list1, list2);
+        // Solution: 22014209
     }
 
-    public Problem2(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
+    public static void Solution(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
         ArrayList<Integer> list1 = arr1;
         ArrayList<Integer> list2 = arr2;
 
@@ -36,17 +37,15 @@ public class Problem2 {
         }
 
         System.out.println("Total Similarity Score: " + output);
-        // Answer: 22014209
     }
 
-    public int appears(int i, ArrayList<Integer> arr) {
+    public static int appears(int i, ArrayList<Integer> arr) {
         int c = 0;
 
         for (int j : arr) {
             if (j == i)
                 c++;
         }
-
         return c;
     }
 }

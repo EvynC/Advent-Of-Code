@@ -7,10 +7,10 @@ import java.io.FileNotFoundException;
 
 public class Problem1 {
     public static void main(String[] args) throws FileNotFoundException {
-        // Historian Hysteria Part 1
+        // Problem Name: Historian Hysteria Part 1
 
         // PARSE DATA
-        Scanner scan = new Scanner(new File("./2024/Day1/input.txt"));
+        Scanner scan = new Scanner(new File("./Day1/input.in"));
 
         ArrayList<Integer> list1 = new ArrayList<Integer>();
         ArrayList<Integer> list2 = new ArrayList<Integer>();
@@ -19,13 +19,13 @@ public class Problem1 {
             list1.add(scan.nextInt());
             list2.add(scan.nextInt());
         }
-
         scan.close();
 
-        new Problem1(list1, list2);
+        Solution(list1, list2);
+        // Solution: 1938424
     }
 
-    public Problem1(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
+    public static void Solution(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
         ArrayList<Integer> list1 = sortArr(arr1);
         ArrayList<Integer> list2 = sortArr(arr2);
 
@@ -36,10 +36,9 @@ public class Problem1 {
         }
 
         System.out.println("Total Difference: " + output);
-        // Answer: 1938424
     }
 
-    public ArrayList<Integer> sortArr(ArrayList<Integer> arr) {
+    public static ArrayList<Integer> sortArr(ArrayList<Integer> arr) {
         // ArrayList Insertion sort
 
         for (int i = 1; i < arr.size(); i++) {
